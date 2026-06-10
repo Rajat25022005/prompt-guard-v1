@@ -34,7 +34,7 @@ print("✅ Step 2/7: Repo cloned & dependencies installed")
 import torch
 assert torch.cuda.is_available(), "❌ No GPU! Go to Runtime → Change runtime type → T4 GPU"
 gpu_name = torch.cuda.get_device_name(0)
-vram = torch.cuda.get_device_properties(0).total_mem / 1e9
+vram = torch.cuda.get_device_properties(0).total_memory / 1e9
 print(f"✅ Step 3/7: GPU ready — {gpu_name} ({vram:.1f} GB)")
 
 # ============================================================
